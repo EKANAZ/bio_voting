@@ -1,0 +1,30 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h3 align="CENTER">CANDIDATE LIST</h3>
+<table align="center" border="2" cellpadding="5" cellspacing="5" width="50%">
+	<tr>
+		<th>u_ID<br>(candidate_id)</th>
+		<th>Name</th>
+		<th>position</th>
+        <th>place</th>
+
+
+	</tr>
+    {% for x in val %}
+	<tr>
+
+		<td>{{ x.u_id }}</td>
+		<td>{{ x.name }}</td>
+		<td>{{ x.position }}</td>
+        <td>{{ x.place }}</td>
+        {% endfor %}
+	</tr>
+
+	</table>
+</body>
+</html>

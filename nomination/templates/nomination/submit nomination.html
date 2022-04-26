@@ -1,0 +1,62 @@
+{% extends 'temp/Public user.html' %}
+{% block base %}
+<body >
+<form method="POST">
+    {% csrf_token %}
+	<h1 align="center"></h1>
+	<table align="center">
+    <br>   <br>   <br>   <br>   <br>
+		<tr>
+
+            ELECTION Name
+
+            <td><select name="cn">
+                <option value="select"></option>
+                {% for v in pp %}
+                <option  value="{{ v.election }}">{{ v.election }}</option>
+                {% endfor %}
+            </select></td>
+</tr>
+
+<tr>
+            <td>position <input type="text"name="cp"></td>
+        </tr>
+            <tr>
+            <td>place <input type="text" name="cpl"></td>
+		</tr>
+		<tr>
+
+		<td align="center" ><input type="submit" name="submit" value="submit">&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+	</table>
+</form>
+</body>
+    <style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #cc60a4;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+</style>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+    <style>input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+    #txt{
+        color: white;
+    }
+</style>
+<body>
+
+<form method="post">
+    {% csrf_token %}
+	<h1 id="txt" align="center">ADD ELECTION</h1>
+	<table align="center">
+		<tr>
+		</tr>
+        <td>ELECTION </td>
+        	<td><input type="text" name="election" required=""></td>
+		</tr>
+        <tr> <br></tr>
+        <tr>
+			<td>DATE</td>
+			<td><input type="date" name="date" required=""></td>
+		</tr>
+
+		<td align="center" colspan="2"><input type="submit" name="log" value="ADD">&nbsp;&nbsp;&nbsp;<a href=""></a></td>
+	</table>
+</form>
+
+</body>
+{% endblock %}

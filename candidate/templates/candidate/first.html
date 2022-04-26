@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body >
+<h3 align="center">DETALIS<h3>
+	<table align="center" border="2" cellpadding="5" cellspacing="5" width="50%"> 
+	<tr>
+		<th>Name</th>
+		<th>Address</th>
+		<th>Gender</th>
+		<th>Email</th>
+		<th>Phone</th>
+        <th>status<th>
+
+	</tr>
+        {% for n in data %}
+	<tr>
+		<td>{{ n.username }}</td>
+		<td>{{ n.address }}</td>
+		<td>{{ n.gender }}</td>
+		<td>{{ n.email }}</td>
+		<td>{{ n.phone_number }}</td>
+        <td><td>
+		<td><a href="">Approved</a></td>
+		<td><a href="">Reject</a></td>
+	</tr>
+        {% endfor %}
+	</table>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'temp/Public user.html' %}
+{% block base %}
+<body>
+<form method="post">
+    {% csrf_token %}
+	<h1 align="center"></h1>
+	<table align="center">
+		<tr>
+			<td>ELECTION</td>
+			<td><select>
+				<option value="select" name="e_id">select</option>
+			
+			</select></td>
+		</tr>
+		<tr>
+			<td>CANDIDATE</td>
+			<td><select>
+				<option value="select" name="c_id">select</option>
+		</tr>
+		<tr>
+			<td>POSITION</td>
+			<td><select>
+				<option value="select" name="p_id">select</option>
+		</tr>
+		
+		<td align="center" colspan="2"><input type="submit" name="log" value="vote">&nbsp;&nbsp;&nbsp;</td>
+	</table>
+</form>
+</body>
+       <style>input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+{% endblock %}

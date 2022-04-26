@@ -1,0 +1,52 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+    <style>
+      input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+    </style>
+<body>
+<form method="post">
+    {% csrf_token %}
+	<h1 align="center"></h1>
+	<table align="center" >
+		<tr>
+			<td>p_id</td>
+			<td><input type="text" name="p_id" required=""></td>
+		</tr>
+        <tr>
+            <br>
+       <br>
+        </tr>
+        <tr>
+        <td>e_id </td>
+        	<td><input type="text" name="e_id" required=""></td>
+		</tr>
+        <tr>
+			<td>POST</td>
+			<td><input type="text" name="post" required=""></td>
+		</tr>
+        <tr>
+		<td align="center" colspan="2"><input type="submit" name="log" value="ADD">&nbsp;&nbsp;&nbsp;</td>
+	</table>
+
+</form>
+</body>
+{% endblock %}

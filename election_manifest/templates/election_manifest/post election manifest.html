@@ -1,0 +1,40 @@
+{% extends 'temp/candidate.html' %}
+{% block base %}
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+	<h1 align="center"></h1>
+	<table align="center">
+		<tr>
+			<td>ELECTION MANIFEST</td>
+			<td><input type="file" name="electionmanifest" required=""></td></tr><br>
+		 	<td align="center" colspan="2">
+		 	<input type="submit" name="post" value="POST" >&nbsp;&nbsp;&nbsp;</td>
+	</table>
+</form>
+</body>
+        <style>input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 25%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+    #txt{
+        color: white;
+    }
+</style>
+{% endblock %}

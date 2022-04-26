@@ -1,0 +1,106 @@
+{% extends 'temp/main.html' %}
+{% block base %}
+        <style>input[type=text], select {
+  width: 100%;
+  padding: 9px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+    #txt{
+        color: white;
+    }
+</style>
+	<center>
+<form method="post">
+     {% csrf_token %}
+	<h1 > Registration Form</h1>
+	<table>
+		<tr>
+			<td>
+				Username : 
+			</td>
+			<td>
+				<input type="text" name="username" required="">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Address : 
+			</td>
+			<td>
+				<input type="text" name="address" required="">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				Phone Number : 
+			</td>
+			<td>
+				<input type="text" name="userphone" required="">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				E-mail :
+			</td>
+			<td>
+				<input type="text" name="useremail" required="">
+			</td>
+		</tr>
+{#        <tr>#}
+{#			<td>#}
+{#				Adharcard :#}
+{#			</td>#}
+{#			<td>#}
+{#				<input type="text" name="adr" required="">#}
+{#			</td>#}
+{#		</tr>#}
+		<tr>
+			<td>
+				Gender :
+			</td>
+			<td>
+				<input type="radio" name="gender" value="male">Male<input type="radio" name="gender" value="female">Female
+			</td>
+		</tr>
+		<tr>
+			<td>
+			    Password : 
+		    </td>
+		    <td>
+			    <input type="password" name="userpassword" required="">
+		    </td>
+	    </tr>
+{#	    <tr>#}
+{#		    <td>#}
+{#			    Confirm Password : #}
+{#		    </td>#}
+{#		    <td>#}
+{#			    <input type="text" name="confirmpassword" required="">#}
+{#		    </td>#}
+{#	    </tr>#}
+	</table><br>
+	<input type="submit" name="usersubmit" value="Register">
+	</center>
+{#<script>#}
+{#    {% if ok %}#}
+{#    alert('{{ ok }}');#}
+{#    {% endif %}#}
+{#</script>#}
+</form>
+{% endblock %}

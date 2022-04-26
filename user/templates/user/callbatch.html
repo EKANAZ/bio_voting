@@ -1,0 +1,39 @@
+{% extends 'temp/main.html' %}
+{% block base %}
+        <style>input[type=text], select {
+  width: 100%;
+  padding: 9px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 40%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+    #txt{
+        color: white;
+    }
+</style>
+	<center>
+    <form method="post">
+     {% csrf_token %}
+            <h1 >Enroll Finger</h1>
+            <input type="submit" name="usersubmit" value="Enroll Finger">
+            </center>
+        {#<script>#}
+        {#    {% if ok %}#}
+        {#    alert('{{ ok }}');#}
+        {#    {% endif %}#}
+        {#</script>#}
+    </form>
+{% endblock %}

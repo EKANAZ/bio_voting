@@ -1,0 +1,61 @@
+{% extends 'temp/Public user.html' %}
+{% block base %}
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed table header</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+      <link rel="stylesheet" href="/static/table/style.css">
+
+
+</head>
+
+<body>
+  <section>
+  <!--for demo wrap-->
+  <h1>View election</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+     <tr>
+		<th>Election Name</th>
+		<th>Date</th>
+
+	</tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+      {% for x in val %}
+	<tr>
+		<td>{{ x.election }}</td>
+		<td>{{ x.date }}</td>
+
+		</tr>
+    {% endfor %}
+</table>
+  </div>
+  <p  style=  text-align:center   >scroll down </p>
+</section>
+
+
+<!-- follow me template -->
+
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="/static/table/index.js"></script>
+
+</body>
+
+</html>
+
+
+{% endblock %}

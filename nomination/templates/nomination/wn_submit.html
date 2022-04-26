@@ -1,0 +1,38 @@
+{% extends 'temp/candidate.html' %}
+{% block base %}
+<form method="post">
+    {% csrf_token %}
+		<table align="center">
+			<tr>
+			<td>REASON</td>
+			<td><input type="text area" name="reson" required=""></td>
+		</tr>
+		<td align="center" colspan="2"><input type="submit" name="log" value="SUBMIT"></td>
+		</table>
+	</form>
+</body>
+    <style>input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+    #txt{
+        color: white;
+    }
+</style>
+{% endblock %}
